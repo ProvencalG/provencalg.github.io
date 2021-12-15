@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.duo-container {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 120px 0px;
+}
+
+.duo-container.duo-first {
+    margin-top: 40px;
+}
+
+.duo-container.aboutTitle {
+    margin: 50px 0px 0px 0px;
+    
+}
+
+.aboutTitle p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    width: 560px;
+    padding: 30px 50px;
+    margin: 0;
+}
+
+
+.carousel, .duo-container > img {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    width: 560px;
+    height: auto;
+    overflow: hidden;
+}
+
+.side-text {
+    width: 560px;
+    padding: 30px 50px;
+}
+
+.side-text h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: start;
+    text-transform: none;
+}
+
+.image-carousel {
+    display:flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons-carousel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons-carousel .rightButton {
+    background-color: #2f1d27;
+}
+
+.buttons-carousel button {
+    font-family: "Roboto", sans-serif;
+    background-color: #24161E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    width: 50%;
+    height: 36px;
+}
+
+.buttons-carousel button > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.buttons-carousel button:hover {
+    opacity: 0.8;
+}
+
+
+@media (orientation: portrait) {
+    .duo-container {
+        flex-direction: column;
+    }
+    .duo-container.reversed {
+        flex-direction: column-reverse;
+    }
+    .carousel, .duo-container > img {
+        height: auto;
+        width: 100vw;
+        max-width: 100%;
+    }
+    .side-text {
+        width: auto;
+        padding: 30px 20px;
+    }
+    .aboutTitle p {
+        padding: 30px 0px;
+        font-size: 2rem;
+        width: 300px;
+    }
+    .aboutTitle .side-text {
+        height: 0px;
+        padding: 0px;
+    }
+}

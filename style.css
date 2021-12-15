@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Share+Tech+Mono&display=swap');
+
+
+:root {
+    --color-main-background: #2c1825;
+    --color-yellow: rgb(251, 208, 64);
+    --splitTitleColor: #fff;
+    --color-background: #333;
+  
+    --color-btn-background: rgba(0, 0, 0, 0.3);
+  
+    --landing-full-image: url("TP/TP-background.jpg");
+    --image-first: url('https://www.isart.fr/app/uploads//2019/02/isart-cours.jpg');
+    --image-last: url('https://thekharkivtimes.com/wp-content/uploads/2016/09/005715995bb44545b58330f22dd9f8a7.png');
+    --gradient-first: linear-gradient(
+      rgba(156, 145, 114, 0.5),
+      rgba(156, 145, 114, 0.6)
+    );
+    --gradient-last: linear-gradient(
+      rgba(122, 108, 28, 0.5),
+      rgba(122, 108, 28, 0.6)
+    );
+  
+    --hover-width: 75%;
+    --non-hover-width: 25%;
+}
+
+/* #region Landing split */
+#landing_split * {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    white-space: nowrap;
+    color: var(--splitTitleColor);
+    font-size: calc(0.5rem + 0.5vw);
+}
+
+#landing_split {
+    background-color: var(--color-background);
+    display: flex;
+}
+
+#landing_split > .split {
+    width: 50vw;
+    height: 50vh;
+    max-width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    flex: 1 1 20vw;
+    transition: all 0.8s ease-in-out;
+}
+
+#first {
+    background-image: var(--gradient-first), var(--image-first);
+    background-blend-mode: normal;
+    background-size: cover;
+    background-position: center center;
+}
+
+#last {
+    background-image: var(--gradient-last), var(--image-last);
+    background-blend-mode: normal;
+    background-size: cover;
+}
+
+#first:hover {
+    flex-grow: 75;
+}
+
+#last:hover {
+    flex-grow: 75;
+}
+
+.split-btn {
+    font-size: 1.4rem;
+    padding: 0.5em 1em;
+    background-color: var(--color-btn-background);
+    border: 1px solid var(--splitTitleColor);
+    color: var(--splitTitleColor);
+    text-decoration: none;
+    transition: transform 0.1s ease-out;
+}
+
+a.split-btn:hover {
+    transform: scale(1.2);
+}
+
+#landing_split h2 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+}
+
+/* #endregion */
+
+/* #region Landing full */
+.landing-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 95vh;
+    max-width: 100%;
+    margin: 0;
+    background-image: var(--landing-full-image);
+    background-size: cover;
+    background-position: center center;
+}
+
+.landing-title {
+    position: absolute;
+    top: 20vh;
+}
+
+.landing-full h1, .landing-full h2 {
+    font-family: 'Big Shoulders Display', monospace;
+    color: var(--color-yellow);
+    text-shadow: 0px 0px 5px rgb(66, 66, 62);
+    font-size: 10rem;
+    margin: 0;
+    cursor: default;
+    text-align: center;
+    line-height: 140px;
+}
+.landing-full h2 {
+    margin-bottom: 5vh;
+    font-size: 6rem;
+    letter-spacing: 20px;
+}
+
+.landing-full a {
+    box-shadow: 0px 0px 4px rgb(66, 66, 62);
+}
+
+.landing-button {
+    position: absolute;
+    top: 55vh;
+    transition: transform 0.1s ease-out;
+}
+
+.landing-button a {
+    padding: 12px 13px;
+    color: var(--color-yellow);
+    border-color: var(--color-yellow);
+    border-radius: 50px;
+    border-width: 7px;
+    border-style: solid;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 6px rgb(66, 66, 62);
+}
+
+.landing-button a:hover {
+    background-color: var(--color-yellow);
+    color: white;
+    font-weight: 800;
+    box-shadow: 0px 0px 2px rgb(66, 66, 62);
+    transform: scale(0.9);
+}
+
+/* #endregion */
+
+body, html {
+    margin: auto 0;
+    width: 100%;
+    background-color: #F5F7F2;
+    background-size: cover;
+}
+
+.yellow {
+    color: var(--color-yellow);
+}
+
+.ytvideo {
+    overflow: hidden;
+    width: 560px;
+    height: 315px;
+}
+
+/* #region Pic Grid */
+.picsGrid {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 1fr; 
+}
+
+.picBox {
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.picBox.textBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #eaeaea;
+}
+
+.picBox.textBox > p, .picBox.textBox > h2 {
+    text-align:center;
+}
+
+.picBox > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.picBox h4 {
+    color: black;
+    text-align: left;
+}
+
+.picImg {
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+
+.picBox:hover , .picBox:focus{
+    transform: scale(1.04);
+}
+
+.picBox:hover .food-info {
+    transform: translateY(-99%);
+}
+
+.food-info {
+    background-color: #fff;
+    padding: 1rem;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 100%;
+    transform: translateY(1%);
+    transition: transform 0.2s ease-in;
+    border-radius: 0px 0px 4px 4px;
+}
+/* #endregion */
+
+.bgDark {
+    background-color: var(--color-main-background);
+}
+
+.nav-link.active {
+    color: #7A72B6;
+}
+
+.navbar-custom {
+    background-color: var(--color-main-background);
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar>.container-xl>.navbar-brand {
+    color: #fff;
+}
+.navbar>.container-xl>.navbar-brand:focus, .navbar>.container-xl>.navbar-brand:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent !important;
+    cursor: default;
+}
+
+svg.svg-themed {
+    fill: var(--color-main-background);
+}
+
+.boxmenu {
+    padding: 5px;
+    margin: 5px 20px;
+}
+
+.cardbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100%;
+    margin: 0px;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    margin: 50px 0px 30px 0px;
+    border-radius: 6px;
+    color: rgba(0,0,0, 0.87);
+    background: #F5F7F2;
+    transition: all 0.1s ease;
+}
+
+.card:hover {
+    transform: translate(3px, 6px) skew(1deg, 0deg);
+
+}
+
+.card img {
+    /*height: 60%;*/
+    width: 92%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+    transition: all 0.1s ease;
+    box-shadow: 0px 10px 20px -6px rgb(0 0 0 / 30%), 0 4px 25px 0px rgb(0 0 0 / 10%), 0 8px 10px -5px rgb(0 0 0 / 12%);
+}
+
+.card img:hover {
+    transform: scale(1.03);
+}
+
+.card-title {
+    color: #e23498
+}
+
+.btn-outline-custom {
+    color: #55499f;
+}
+
+.navbar-brand {
+    font-size: 32px;
+    margin-right: 60px;
+}
+
+.nav-item {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+a.nav-link {
+    padding: 10px;
+}
+
+.nav-item a {
+    color: #7A72B6;
+}
+
+.profile-desc {
+    padding: 30px;
+    max-width: 1100px;
+}
+
+h4 {
+    color: #7A72B6;
+    text-align:center;
+    text-transform:uppercase;
+}
+.boxmenu :hover {
+    color: #BAB2F6;
+    transform: scale(1.1);
+}
+
+a.boxmenu:hover {
+    text-decoration: none;
+}
+
+.menu-deactivated {
+    color: #CACFCF;
+}
+
+p {
+    font-family: Helvetica, Arial;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.light {
+    color: #EAEFEF;
+}
+
+a, strong {
+    color: #e23498;
+}
+
+@media (orientation: portrait) {
+    #landing_split {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #landing_split > .split {
+        width: 100vw;
+        height: 50vh;
+        flex: 1 1 20vh;
+    }
+
+    #first:hover {
+        flex-grow: 75;
+    }
+
+    #last:hover {
+        flex-grow: 75;
+    }
+
+    .ytvideo {
+        width: 100vw;
+        height: 56.25vw;
+        max-width: 100%;
+    }
+
+    .landing-title {
+        position: absolute;
+        top: 15vh;
+    }
+
+    .landing-full h1, .landing-full h2 {
+        font-size: 8.5rem;
+    }
+    .landing-full h2 {
+        font-size: 4.8rem;
+    }
+    .landing-button {
+        position: absolute;
+        top: unset;
+        bottom: 6vh;
+        /* margin-top: 26vh; */
+    }
+}

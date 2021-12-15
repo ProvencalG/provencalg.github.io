@@ -9,7 +9,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
-    <title>Eddy Briand: Cooking</title>
+    <link href="styleCarousel.css" rel="stylesheet">
+    <title>Eddy Briand: Studies</title>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -35,102 +36,71 @@
             <li class="nav-item ">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
               <a class="nav-link" href="myStudies.html">Studies</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="myGame.html">Game dev</a>
             </li>
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="myCooking.html">Cooking</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="picsGrid">
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/Burger438573.jpg);"></div>
-        <!-- <img src="Cook/Burger438573.jpg"> -->
-        <div class="food-info">
-          <h4>Burger</h4>
-          <p>Classic burger with homemade buns and an amazing sauce inspired by In&Out.</p>
+    <div id="landing_split">
+      <section class="split" id="first">
+          <h2>ISART Digital Paris</h2>
+          <a href="#ISART" class="split-btn">INFOS</a>
+      </section>
+      <section class="split" id="last">
+          <h2>CS50x by Harvard</h2>
+          <a href="#CS50" class="split-btn">INFOS</a>
+      </section>
+    </div>
+    <div id="ISART" class="duo-container border-bottom">
+      <div class="carousel">
+        <div class="image-carousel" id="carousel-imgs">
+          <img src="StudentPics/jam1Zoom.jpg" alt="first-image">
+          <img src="StudentPics/jam2.jpg" alt="second-image">
+          <img src="StudentPics/makey1.jpg" alt="third-image">
+          <img src="StudentPics/jam3.jpg" alt="fourth-image">
+        </div>
+        <div class="buttons-carousel">
+          <button class="leftButton"><a href="#" onclick="return false;">PREV</a></button>
+          <button class="rightButton"><a href="#" onclick="return false;">NEXT</a></button>
         </div>
       </div>
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/CarrotCake05983.jpg);"></div>
-        <!-- <img src="Cook/CarrotCake05983.jpg"> -->
-        <div class="food-info">
-          <h4>Carrot Cake</h4>
-          <p>Small muffin-like carrot cake.</p>
-        </div>
-      </div>
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/FriedRice1045.jpg);"></div>
-        <!-- <img src="Cook/FriedRice1045.jpg"> -->
-        <div class="food-info">
-          <h4>Fried Rice</h4>
-          <p>Leftover rice cooked in a Wok with eggs, garlic, shallots, soy sauce and many other stuff.</p>
-        </div>
-      </div>
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/Buns876.jpg);"></div>
-        <!-- <img src="Cook/Buns876.jpg"> -->
-        <div class="food-info">
-          <h4>Japanese Curry Buns</h4>
-          <p>Leftover japanese curry with potatoes oignons and carrots, in a panko fried bun.</p>
-        </div>
-      </div>
-      <div class="picBox textBox">
-        <h2 class="dark">Mhhhhhhhh.</h2>
-        <br>
-        <p>If looking at this you begin to feel hungry, it's normal, I do too. Cooking is a drive of mine and I can't spend a day without planning something good to make, share and eat.</p>
-        <p>Do not hesitate to look over the name of each meal and maybe make it at home too!</p>
-      </div>
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/Cookie883.jpg);"></div>
-        <!-- <img src="Cook/Cookie883.jpg"> -->
-        <div class="food-info">
-          <h4>The Cookie</h4>
-          <p>The best cookies ever, inspired by Levain bakery NYC.</p>
-        </div>
-      </div>
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/OrangeChicken4751.jpg);"></div>
-        <!-- <img src="Cook/OrangeChicken4751.jpg"> -->
-        <div class="food-info">
-          <h4>Orange Chicken</h4>
-          <p>Fried chicken with amazing orange sacrum sauce inspired by Panda Express.</p>
-        </div>
-      </div>
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/ChickenCurry54986.jpg);"></div>
-        <!-- <img src="Cook/ChickenCurry54986.jpg"> -->
-        <div class="food-info">
-          <h4>Fried Chicken Curry</h4>
-          <p>A classic japanese spicy curry with panko fried chicken tonkatsu-like.</p>
-        </div>
-      </div>
-      <div class="picBox">
-        <div class="picImg" style="background-image: url(Cook/Egg5943875.jpg);"></div>
-        <!-- <img src="Cook/Egg5943875.jpg"> -->
-        <div class="food-info">
-          <h4>Poached egg mushroom toast</h4>
-          <p>A 'Wow' starter. Oosy egg, beautiful mushrooms and lardons with buttery brioche.</p>
-        </div>
+      <div class="side-text">
+        <h4>ISART Digital Paris</h4>
+        <p>One of the best Game dev school in France. I was able to learn core and level design, UX, gamification, Unity and many other skills during many student projects and exercises.</p>
+        <p>Stealth game, Run & Gun, One button game, Makey Makey game and controller, Super Mario Bros levels, Game Jams, UX redesign, Narrative design and rational Level design  challenges, Unity projects... The school's structure guided my learning of design and software production.</p>
+        <!-- <p>Une des meilleures écoles de France dans le jeu vidéo. J'ai pu apprendre le core et level design, l'UX, la gamification, Unity et plein d'autres compétences au cours de nombreux projets.</p>
+        <p>Jeu d'infiltration, Run & Gun, One button game, jeu Makey Makey, ainsi que des niveaux de Super Mario Bros, Game Jams, analyses d'UX, exercices de narrative design et de rational Level Design, projets Unity... La structure de l'école m'a permis de me guider dans l'apprentissage du design mais aussi de la production.</p> -->
       </div>
     </div>
-    <div class="container-xl">
-      <footer class="d-flex justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-5 d-flex align-items-center">
-          <span class="text-muted">Made by Eddy Briand using CSS grid, Bootstrap only for navbar and footer - 2021</span>
-        </div>
+    <div id="CS50" class="duo-container reversed">
+      <div class="side-text">
+        <h4>CS50x by Harvard</h4>
+        <p>An online program (MOOC) divided into 11 weeks which allows students from around the world to take the CS50: Computer Science Fundamentals course by the Harvard University.</p>
+        <p>Thanks to amazing classes, challenging exercises and great evaluating tools, I was able to learn computer science the best way possible. </p>
+        <p>C, Python, HTML CSS Javascript, SQL.</p>
+      </div>
+      <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border ytvideo" data-video="" src="https://video.cs50.io/YoXxevp1WRQ?screen=mu28ADhzRQE" id="iFrameResizer0"></iframe>
+    </div>
 
-        <ul class="nav col-md-2 justify-content-end list-unstyled d-flex">
+    <div class="container-xl">
+      <footer class="row d-flex justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-5 d-flex align-items-center">
+          <span class="text-muted">Made by Eddy Briand using Bootstrap for the nav bar and footer - 2021</span>
+        </div>
+        <ul class="nav col-3 justify-content-end list-unstyled d-flex">
           <li style="margin-left: 10px"><a class="text-muted" href="https://www.linkedin.com/in/eddy-briand/" target="_blank"><svg class="bi svg-themed" width="24" height="24"><use href="#linkedin"></use></svg></a></li>
           <li style="margin-left: 10px"><a class="text-muted" href="https://www.instagram.com/eddy.brnd/" target="_blank"><svg class="bi svg-themed" width="24" height="24"><use href="#instagram"></use></svg></a></li>
         </ul>
       </footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
